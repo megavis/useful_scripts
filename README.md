@@ -14,5 +14,9 @@ upgrade to usable tty
 
 find all files with "pass"
 > grep -i -R "pass" 2>/dev/null 
+
 > egrep -i -R "pass|user" 2>/dev/null
+
+_find_ interesting
+> find ./ -type f -exec egrep -i "user|pass|key|secret" {} \; -exec echo "^^^^**** {} **** ^^^^" \;
 
